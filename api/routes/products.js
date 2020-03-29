@@ -38,7 +38,7 @@ router.get('/', (req, res, next) => {
                     _id: doc._id,
                     request : {
                         type : "GET",
-                        url : "http://localhost:3002/products/"+ doc._id
+                        url : "https://productshopapi.herokuapp.com/products"+ doc._id
                     }
 
                 }
