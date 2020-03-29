@@ -38,11 +38,6 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('shop-frontend/build'));
   }
 
-
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "shop-frontend", "build", "index.html"));
-// });
-
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Accept, Content-Type, X-Requested-With, Authorization, Origin');
