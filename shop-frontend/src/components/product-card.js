@@ -6,7 +6,7 @@ export class ProductCard extends Component {
         return (
               <div className="main-card" >
                    <div className="card" >  
-                        <img className="image " src={"http://localhost:3002/" + this.props.productimage} alt="photo" />
+                        <img className="image " src={"https://productshopapi.herokuapp.com/" + this.props.productimage} alt="photo" />
                         <h3>{this.props.productname} </h3>
                         <p className="price"> ${this.props.price} </p>
                         <p> {this.props.description} </p>

@@ -20,7 +20,7 @@ import axios from 'axios';
 
 
     componentDidMount() {
-        axios.get('http://localhost:3002/products/' + this.props.match.params.id)
+        axios.get('https://productshopapi.herokuapp.com/products/' + this.props.match.params.id)
           .then(res => {
             this.setState({
               productname: res.data.product.productname,
@@ -54,7 +54,7 @@ import axios from 'axios';
 
         console.log(userObject)
     
-      axios.put("http://localhost:3002/products/" + this.props.match.params.id, userObject)
+      axios.put("https://productshopapi.herokuapp.com/products/" + this.props.match.params.id, userObject)
       .then(result =>{
           console.log('Product successfully updated' + result)
     
