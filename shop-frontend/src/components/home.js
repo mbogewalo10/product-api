@@ -13,7 +13,7 @@ class homeCard extends Component {
 
     componentDidMount(){
     
-        axios.get("http://localhost:3002/products/")
+        axios.get("https://productshopapi.herokuapp.com/products/")
         .then(res => {
             console.log(res.data.createdProduct.products)
             this.setState({products: res.data.createdProduct.products});  

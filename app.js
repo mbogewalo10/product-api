@@ -38,12 +38,6 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('shop-frontend/build'));
   }
 
-  const proxy = require('http-proxy-middleware')
-
-module.exports = function(app) {
-    // add other server routes to path array
-    app.use(proxy(['/' ], { target: 'http://localhost:3002' }));
-} 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Accept, Content-Type, X-Requested-With, Authorization, Origin');
